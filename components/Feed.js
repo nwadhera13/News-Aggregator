@@ -36,7 +36,6 @@ const Feed = ({articles}) => {
   const handleClickOpen = (article) => {
     setOpen(true);
     setCurrArticle(article);
-    console.log(currArticle);
   };
 
   const handleClose = () => {

@@ -206,14 +206,17 @@ const Searchbar = () => {
         words.map((word)=>{
             query=query+word.toString()+" AND ";
         })
-        console.log(query);
+        if(textField!=""){
+            addKeyword(textField);
+            query=query+textField+" AND ";
+            setTextField('');
+        }
         let filterText = "";
         filter.map((name)=>{
             filterText=filterText+',"'+name+'"';
         })
         const fetchURL = filter.length>0 ? `${url}${query}&sort=${sort}&fq=news_desk:(${filterText})&page=${page}&api-key=${apikey}`:`${url}${query}&sort=${sort}&page=${page}&api-key=${apikey}`;
         const response = await fetch(fetchURL);
-        console.log(fetchURL);
         const data = await response.json();
         try{
             setFeed(data.response.docs);
@@ -224,7 +227,6 @@ const Searchbar = () => {
             console.log("error");
             
         }
-        console.log(data.response);
         setSearched(words);
         setFiltered(filter);
         setFilter([]);
@@ -245,7 +247,6 @@ const Searchbar = () => {
         })
         const fetchURL = filtered.length>0 ? `${url}${query}&sort=${sorted}&fq=news_desk:(${filterText})&page=${page}&api-key=${apikey}`:`${url}${query}&sort=${sorted}&page=${page}&api-key=${apikey}`;
         const response = await fetch(fetchURL);
-        console.log(fetchURL);
         const data = await response.json();
         try{
             setFeed(data.response.docs);
@@ -257,7 +258,6 @@ const Searchbar = () => {
             console.log("error");
             
         }
-        console.log(data.response);
         setFilter([]);
         setSort('');
         setWords([]);

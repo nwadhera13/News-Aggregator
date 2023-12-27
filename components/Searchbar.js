@@ -243,7 +243,7 @@ const Searchbar = () => {
         filtered.map((name)=>{
             filterText=filterText+',"'+name+'"';
         })
-        const fetchURL = filter.length>0 ? `${url}${query}&sort=${sorted}&fq=news_desk:(${filterText})&page=${page}&api-key=${apikey}`:`${url}${query}&sort=${sorted}&page=${page}&api-key=${apikey}`;
+        const fetchURL = filtered.length>0 ? `${url}${query}&sort=${sorted}&fq=news_desk:(${filterText})&page=${page}&api-key=${apikey}`:`${url}${query}&sort=${sorted}&page=${page}&api-key=${apikey}`;
         const response = await fetch(fetchURL);
         console.log(fetchURL);
         const data = await response.json();

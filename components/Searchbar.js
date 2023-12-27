@@ -284,8 +284,6 @@ const Searchbar = () => {
         <Paper 
       sx={{ p: '2px 4px', display: 'flex', alignItems: 'center' }}
     >
-      <IconButton sx={{ p: '10px' }} aria-label="menu">
-      </IconButton>
       <InputBase
         sx={{ ml: 1, flex: 1 }}
         placeholder="Enter Keyword"
@@ -363,7 +361,7 @@ const Searchbar = () => {
       <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
       {!loading ? 
       <Button color="success" variant="outlined" startIcon={<SearchIcon />} onClick={()=>SearchKeyWords()}>
-        Search
+        
         </Button>
         :<Button color="success" variant="outlined" startIcon={<SearchIcon />} onClick={()=>SearchKeyWords()} disabled>
         Searching
@@ -409,6 +407,38 @@ const Searchbar = () => {
         </div>
 
         <br/>
+        <Container maxWidth='md'>
+    <Box sx={{ width: '100%' }}>
+          <Stack spacing={2}>
+            <Item><ButtonGroup
+      disableElevation
+      variant="contained"
+      aria-label="Disabled elevation buttons"
+    >
+        {page>0?
+      <Button
+        color='success'
+        onClick={()=>{
+            setPage(page-1);
+        }}
+      >Prev</Button>:
+      <Button disabled>Prev</Button>
+      }
+      {page+1<Math.ceil(hits/10)?
+      <Button 
+      color='success'
+      onClick={()=>{
+            setPage(page+1);
+        }}>Next</Button>:
+        <Button disabled>Next</Button>
+    }
+    </ButtonGroup></Item>
+            
+            <Item><Typography>Page {page+1} of {Math.ceil(hits/10)}</Typography></Item>          
+            
+          </Stack>
+        </Box>
+    </Container><br/>
         {!error?<>
     <div className='feed'>
     <Feed articles={feed}/>

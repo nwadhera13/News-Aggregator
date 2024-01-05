@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## News Aggregator
 
-## Getting Started
+- Search for news articles based on multiple keywords.
 
-First, run the development server:
+- Sort the results by Relevance, Oldest or Newest.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Filter the news articles based on the news desk(Type of news).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js was used in the development of the web application along with MaterialUI.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- 3rd Party API was utilised(New York Times) using Fetch.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Fully responsive, quick and modern design.
 
-## Learn More
+- The Web Application has been deployed at Vercel
 
-To learn more about Next.js, take a look at the following resources:
+To be Added: 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Light Mode
+## Deployed Link
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+https://news-aggregator-beta.vercel.app/
 
-## Deploy on Vercel
+## Pictures
+<img width="864" alt="image" src="https://github.com/nwadhera13/News-Aggregator/assets/68321799/7e0ed4b5-d2a2-4af6-aa7d-d47fcd5bef71">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+<img width="1266" alt="image" src="https://github.com/nwadhera13/News-Aggregator/assets/68321799/bfd312fe-ef49-4039-851c-2c36befe315c">
+
+
+
+<img width="799" alt="image" src="https://github.com/nwadhera13/News-Aggregator/assets/68321799/384204a7-ade4-4376-bb9e-9e13ec7c6134">
+
+
+
+<img width="1254" alt="image" src="https://github.com/nwadhera13/News-Aggregator/assets/68321799/c07aacdf-8e79-4fbc-9e54-af2d719121f8">
+
+
+
